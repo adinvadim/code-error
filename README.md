@@ -1,4 +1,4 @@
-# Welcome to code-error
+# tiny-code-error
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#License)
 
