@@ -1,5 +1,5 @@
 {
-  "name": "code-error",
+  "name": "tiny-code-error",
   "version": "0.1.0",
   "description": "Simple CodeError JS class (zero deps)",
   "keywords": [
@@ -28,7 +28,7 @@
     "test:tsd": "tsd",
     "typecheck": "tsc --noEmit",
     "watch": "pkgroll --watch",
-    "release": "npm run lint && npm run test &&  changelogen --release && npm publish && git push --follow-tags"
+    "release": "npm run test &&  changelogen --release && npm publish && git push --follow-tags"
   },
   "devDependencies": {
     "@skypack/package-check": "0.2.2",
