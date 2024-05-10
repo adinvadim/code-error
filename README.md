@@ -10,11 +10,11 @@ message.
 ## 📦 Install
 
 ```sh
-yarn add code-error
+yarn add tiny-code-error
 ```
 
 ```sh
-pnpm i code-error
+pnpm i tiny-code-error
 ```
 
 ## 🌟 Example
