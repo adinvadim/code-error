@@ -16,3 +16,6 @@ export class CodeError<T = string> extends Error {
     Object.setPrototypeOf(this, new.target.prototype);
   }
 }
+
+export const isCodeError = (value: any): value is CodeError =>
+  value?.code != null;

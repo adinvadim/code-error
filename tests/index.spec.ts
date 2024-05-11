@@ -1,4 +1,4 @@
-import { CodeError } from "../src";
+import { CodeError, isCodeError } from "../src";
 
 describe("CodeError", () => {
   it("should properly initialize with provided code and default message", () => {
@@ -26,5 +26,28 @@ describe("CodeError", () => {
     const error = new CodeError({ code });
 
     expect(error.message).toBe(`CodeError with code ${code}`);
+  });
+});
+
+describe("isCodeError", () => {
+  it("should return true if value is a CodeError instance", () => {
+    const code = "ERROR_CODE";
+    const error = new CodeError({ code });
+
+    expect(isCodeError(error)).toBe(true);
+  });
+
+  it("shoud return true for object with code property", () => {
+    const code = "ERROR_CODE";
+    const error = { code };
+
+    expect(isCodeError(error)).toBe(true);
+  });
+
+  it("should return false if value is not a CodeError instance", () => {
+    expect(isCodeError(new Error())).toBe(false);
+    expect(isCodeError({})).toBe(false);
+    expect(isCodeError(null)).toBe(false);
+    expect(isCodeError(undefined)).toBe(false);
   });
 });
